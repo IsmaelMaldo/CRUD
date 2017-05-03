@@ -1,0 +1,164 @@
+/* 
+    Created on : 02-may-2017, 8:39:43
+    Author     : ismael
+*/
+
+body.login {
+  background-color: #AAAAAA;
+}
+
+body.login > form {
+  margin: auto;
+  transform: translatey(50%);
+  background-color: #ADD8E6;
+  width: 40vw;
+  padding: 20px 0 20px 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px
+}
+
+body.login > form > input {
+  display: block;
+  margin: 20px auto;
+}
+
+body {
+  margin: 0;
+}
+
+input {
+  background-color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 50px
+}
+
+input[type=submit]{
+  background-color: #E5ECF5;
+  padding: 10px 20px;
+  transition: all ease 0.3s;
+}
+
+input[type=submit]:hover{
+  background-color: #57AFCC;
+  color: #fff;
+}
+
+body > a {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: #00C711;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #FFF;
+}
+
+body > h1 {
+  text-align: center;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  margin: 0;
+  padding: 20px 0;
+  color: #fff;
+  background: linear-gradient(#00ff2a, #4bd862);
+  font-size: 30px;
+}
+
+body > div.tabla {
+  height: calc(100vh - 76px);
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+
+body > div.tabla > table {
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+body > div.tabla > table tr:nth-child(1) {
+  background: linear-gradient(#4b2cff, #4b9bff);
+  color: white;
+}
+
+body > div.tabla > table tr {
+  background-color: #ADD8E6;
+  transition: all ease 0.3s;
+}
+
+body > div.tabla > table tr:nth-child(2n) {
+  background-color: #fff;
+}
+
+body > div.tabla > table td,
+body > div.tabla > table th {
+  text-align: left;
+  padding: 8px;
+}
+
+body > div.tabla > table td > a{
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+body > div.tabla >table td > a > img{
+  height: 12px;
+  margin-right: 4px;
+}
+
+body > div.tabla > table td > a:first-child{
+  margin-right: 10px;
+  background-color: #E72512;
+  transition: all ease 0.3s;
+}
+
+body > div.tabla > table td > a:first-child:hover{
+  background-color: #FE0000;
+}
+
+body > div.tabla > table td > a:last-child{
+  background-color: #4B45FF;
+  transition: all ease 0.3s;
+}
+
+body > div.tabla > table td > a:last-child:hover{
+  background-color: #4bc2ff;
+}
+
+body > form {
+  display: block;
+  width: 30vw;
+  background-color: #ADD8E6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+  margin: 10% auto;
+  padding: 10px
+}
+
+body > form > *{
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+body > form > div > label{
+  display: inline-block;
+  text-align: left;
+  width: 38%
+}
+
+body > div.info {
+  width: 40vw;
+  margin: 10% auto;
+  text-align: center;
+  padding: 40px;
+  background-color: #ADD8E6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+}
