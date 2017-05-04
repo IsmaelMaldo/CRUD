@@ -25,13 +25,16 @@
   </head>
   
     <%
-      try {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "root", "1234");
-        Statement s = conexion.createStatement();
+      Class.forName("com.mysql.jdbc.Driver");
+      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "root", "1234");
+      Statement s = conexion.createStatement();
+
+      //Verificamos que el usuario y la contraseña son correctos
+      ResultSet consulta = s.executeQuery("SELECT COUNT(*) FROM usuarios WHERE usuario = \"" + usuario + "\" AND pass = \"" + pass + "\"");
+      consulta.next();
+      if (consulta.getInt(1) != 0){
         
-        //Verificamos que el usuario y la contraseña son correctos
-        ResultSet consulta = s.executeQuery("SELECT * FROM usuarios WHERE usuario = \"" + usuario + "\" AND pass = \"" + pass + "\"");
+        consulta = s.executeQuery("SELECT * FROM usuarios WHERE usuario = \"" + usuario + "\" AND pass = \"" + pass + "\"");
         while (consulta.next()){
           nombre = consulta.getString("nombre");
           if (consulta.getString("administrador").equals("1")){
@@ -175,7 +178,7 @@
           <%
         }
         
-      } catch (Exception e) {
+      } else {
     %>
     <body class="login">
       <form action="mostrar_usuarios.jsp" method="POST">

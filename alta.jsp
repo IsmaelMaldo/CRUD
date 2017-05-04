@@ -41,7 +41,7 @@
   <body>
     <%
       if (exito) {
-        out.println("<p>Usuario creado con éxito</p>");
+        out.println("<div class=\"info\"><p>Usuario creado con éxito</p></div>");
       }
     %>
     <form action="alta.jsp" method="POST">

@@ -153,9 +153,14 @@ body > form > div > label{
   width: 38%
 }
 
+body > form > p {
+  color: #FF0000;
+  width: 80%;
+}
+
 body > div.info {
   width: 40vw;
-  margin: 10% auto;
+  margin: 3% auto -5% auto;
   text-align: center;
   padding: 40px;
   background-color: #ADD8E6;
