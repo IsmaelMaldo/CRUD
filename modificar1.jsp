@@ -68,8 +68,60 @@
           <option value="1">Administrador</option>
           <option value="0" selected>Invitado</option>
         </select>
+        <label from="avatar">Avatar</label>
         <%
         }
+          if (consulta.getString("avatar").equals("0.png")){
+            %>
+            <select name="avatar_mod" id="avatar">
+              <option value="0.png" selected>Avatar por defecto</option>
+              <option value="1.png">Nishikino Maki</option>
+              <option value="2.png">Koizumi Hanayo</option>
+              <option value="3.png">Hozhizora Rin</option>
+              <option value="4.png">Eli Ayase</option>
+            </select>
+            <%
+          } else if(consulta.getString("avatar").equals("1.png")){
+            %>
+            <select name="avatar_mod">
+              <option value="0.png">Avatar por defecto</option>
+              <option value="1.png" selected>Nishikino Maki</option>
+              <option value="2.png">Koizumi Hanayo</option>
+              <option value="3.png">Hozhizora Rin</option>
+              <option value="4.png">Eli Ayase</option>
+            </select>
+            <%
+          } else if(consulta.getString("avatar").equals("2.png")){
+            %>
+            <select name="avatar_mod">
+              <option value="0.png">Avatar por defecto</option>
+              <option value="1.png">Nishikino Maki</option>
+              <option value="2.png"selected>Koizumi Hanayo</option>
+              <option value="3.png">Hozhizora Rin</option>
+              <option value="4.png">Eli Ayase</option>
+            </select>
+            <%
+          } else if(consulta.getString("avatar").equals("3.png")){
+            %>
+            <select name="avatar_mod">
+              <option value="0.png">Avatar por defecto</option>
+              <option value="1.png">Nishikino Maki</option>
+              <option value="2.png">Koizumi Hanayo</option>
+              <option value="3.png" selected>Hozhizora Rin</option>
+              <option value="4.png">Eli Ayase</option>
+            </select>
+            <%
+          } else if(consulta.getString("avatar").equals("4.png")){
+            %>
+            <select name="avatar_mod">
+              <option value="0.png">Avatar por defecto</option>
+              <option value="1.png">Nishikino Maki</option>
+              <option value="2.png">Koizumi Hanayo</option>
+              <option value="3.png">Hozhizora Rin</option>
+              <option value="4.png" selected>Eli Ayase</option>
+            </select>
+            <%
+          }
     }
         %>
       </div>

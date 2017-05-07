@@ -13,6 +13,7 @@
   request.setCharacterEncoding("UTF-8");
   String usuario = request.getParameter("usuario");
   String pass = request.getParameter("contrasena");
+  String avatarAlta = request.getParameter("avatar_alta");
   String usuarioAlta = request.getParameter("usuario_alta");
   String passAlta = request.getParameter("pass_alta");
   String nombreAlta = request.getParameter("nombre_alta");
@@ -27,7 +28,7 @@
     Class.forName("com.mysql.jdbc.Driver");
     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "root", "1234");
     Statement s = conexion.createStatement();
-    s.execute("INSERT INTO usuarios (usuario, pass, nombre, apellido1, apellido2, administrador) values (\"" + usuarioAlta + "\", \"" + passAlta + "\", \"" + nombreAlta + "\", \"" + apellido1Alta + "\", \"" + apellido2Alta + "\", \"" + adminAlta + "\")");
+    s.execute("INSERT INTO usuarios (avatar, usuario, pass, nombre, apellido1, apellido2, administrador) values (\"" + avatarAlta + "\", \"" + usuarioAlta + "\", \"" + passAlta + "\", \"" + nombreAlta + "\", \"" + apellido1Alta + "\", \"" + apellido2Alta + "\", \"" + adminAlta + "\")");
     exito = true;
   }
 %>
@@ -53,8 +54,15 @@
       <input type="text" name="apellido1_alta" placeholder="Primer apellido"/>
       <input type="text" name="apellido2_alta" placeholder="Segundo apellido"/>
       <select name="admin_alta" id="admin">
-        <option value="1" default>Administrador</option>
+        <option value="1" selected>Administrador</option>
         <option value="0">Invitado</option>
+      </select>
+      <select name="avatar_alta" id="avatar_alta">
+        <option value="0.png" selected>Avatar por defecto</option>
+        <option value="1.png">Nishikino Maki</option>
+        <option value="2.png">Koizumi Hanayo</option>
+        <option value="3.png">Hoshizora Rin</option>
+        <option value="4.png">Eli Ayase</option>
       </select>
       <input type="submit" value="Dar de alta"/>
     </form>

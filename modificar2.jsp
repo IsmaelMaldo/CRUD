@@ -13,6 +13,7 @@
   request.setCharacterEncoding("UTF-8");
   String usuario = request.getParameter("usuario");
   String pass = request.getParameter("contrasena");
+  String avatarMod = request.getParameter("avatar_mod");
   String usuarioMod = request.getParameter("usuario_mod");
   String passMod = request.getParameter("pass_mod");
   String nombreMod = request.getParameter("nombre_mod");
@@ -22,7 +23,7 @@
   Class.forName("com.mysql.jdbc.Driver");
   Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios", "root", "1234");
   Statement s = conexion.createStatement();
-  s.execute("UPDATE usuarios SET pass=\"" + passMod + "\", nombre=\"" + nombreMod + "\", apellido1=\"" + apellido1Mod + "\", apellido2=\"" + apellido2Mod + "\", administrador=\"" + adminMod + "\" WHERE usuario=\"" + usuarioMod + "\"");
+  s.execute("UPDATE usuarios SET avatar=\"" + avatarMod + "\", pass=\"" + passMod + "\", nombre=\"" + nombreMod + "\", apellido1=\"" + apellido1Mod + "\", apellido2=\"" + apellido2Mod + "\", administrador=\"" + adminMod + "\" WHERE usuario=\"" + usuarioMod + "\"");
 %>
 <!DOCTYPE html>
 <html>

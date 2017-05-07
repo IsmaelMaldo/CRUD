@@ -44,7 +44,7 @@
           }
         }
         %>
-        <h1>Lista de usuarios</h1>
+        <h1>Usuarios del foro</h1>
         <%
         //Si el usuario es Administrador
         if (admin){
@@ -53,6 +53,9 @@
           <div class="tabla">
             <table>
               <tr>
+                <th>
+                  Avatar
+                </th>
                 <th>
                   Usuario
                 </th>
@@ -81,6 +84,9 @@
                   %>
                   <tr>
                     <td>
+                      <img class="avatar" src="<%= consulta.getString("avatar") %>" />                      
+                    </td>
+                    <td>
                       <%= consulta.getString("usuario")%>
                     </td>
                     <td>
@@ -105,7 +111,7 @@
                     <%= consulta.getString("fecha_alta")%>
                     </td>
                     <td>
-                      <a href="borrar.jsp?usuario_baja=<%= consulta.getString("usuario") %>&usuario=<%= usuario %>&contrasena=<%= pass %>"><img src="papelera.svg" />Borrar</a>
+                      <a href="confirmacion.jsp?usuario_baja=<%= consulta.getString("usuario") %>&usuario=<%= usuario %>&contrasena=<%= pass %>"><img src="papelera.svg" />Borrar</a>
                       <a href="modificar1.jsp?usuario_mod=<%= consulta.getString("usuario") %>&usuario=<%= usuario %>&contrasena=<%= pass %>"><img src="lapiz.svg" />Modificar</a>
                     </td>
                   </tr>

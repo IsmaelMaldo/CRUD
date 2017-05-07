@@ -49,7 +49,7 @@ body > a {
   top: 10px;
   left: 10px;
   padding: 10px;
-  background-color: #00C711;
+  background-color: #999;
   border-radius: 5px;
   text-decoration: none;
   color: #FFF;
@@ -63,13 +63,14 @@ body > h1 {
   margin: 0;
   padding: 20px 0;
   color: #fff;
-  background: linear-gradient(#00ff2a, #4bd862);
+  background: linear-gradient(#AAAAAA, #FFFFFF 150%);
   font-size: 30px;
 }
 
 body > div.tabla {
   height: calc(100vh - 76px);
   width: 100vw;
+  overflow: auto;
   position: absolute;
   bottom: 0;
 }
@@ -129,6 +130,12 @@ body > div.tabla > table td > a:last-child{
 
 body > div.tabla > table td > a:last-child:hover{
   background-color: #4bc2ff;
+}
+
+body > div.tabla > table tr img.avatar{
+  height: 50px;
+  margin-right: 5px;
+  border-radius: 100px;
 }
 
 body > form {
