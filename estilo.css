@@ -4,7 +4,16 @@
 */
 
 body.login {
-  background-color: #AAAAAA;
+  background-color: #E3F2F7;
+}
+
+body.login > h1.index {
+  background: linear-gradient(#ADD8E6, #FFFFFF 150%);
+  color: #333;
+}
+
+body.login > form > p.index {
+  color: #000;
 }
 
 body.login > form {
